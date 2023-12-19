@@ -127,7 +127,7 @@ const showSelectionDialog = (callback) => {
     exportInfo.forEach((sector) => {
       t.button(sector.route, () => {
         getDestinationDialog().showSelect(
-          getSourceSector(sector.source),
+          sector.source[0],
           (/** @type {Sector} */ d) => callback(sector.source, d)
         );
         dialog.hide();
